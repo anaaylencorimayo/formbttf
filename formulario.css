@@ -1,0 +1,394 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+}
+
+body{
+    background: url(./1092742.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;  /*para que tome la imagen completa*/
+    background-attachment: fixed;/*para que la image se quede quieta y no se mueva con el texto*/
+    padding: none;
+}
+
+/* HEADER */
+header{
+    height: 100px;
+    padding: 0 50px;
+    color:#ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header{
+    background-image: url(/Img/images.jfif);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 140px 60px;
+    margin-left: 10px;    
+
+}
+
+.menu a{
+    color: #faf6f6;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: #6cc091;
+}
+#check{
+    display: none;
+}
+/*termina header*/
+
+
+
+
+/*ejemplo*/
+
+.contenedor_form_general{
+    display: flex; /* Hacer que los elementos sean flexibles (uno al lado del otro) */
+    flex-wrap: wrap; /* Permitir el ajuste de elementos en pantalla pequeña */
+    justify-content: space-between; /* Espacio entre los elementos */
+    
+    
+    /*background-color: blue;*/
+    
+  }
+
+
+  .caja1, .caja2 {
+    flex: 1; /* El espacio que ocupan los formularios será igual */
+    margin: 30px; /* Margen entre los formularios */
+    box-sizing: border-box; /* Incluye el margen en el ancho total */
+    width: calc(50% - 20px); /* Ajustar el ancho para que sean del 50% menos los márgenes */
+ 
+  }
+
+
+  .caja2{
+   /* position: fixed; 
+   con esto deja de ser visible
+   
+    top:0;
+    left:0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);*/
+    display: flex;
+    /*
+    justify-content: center;
+    align-items: center;*/
+    width: 100%;
+    height: 100%;
+
+    opacity:0;
+    visibility: hidden;
+    
+ }
+
+
+
+
+
+  /* Media query para pantallas de celular */
+@media screen and (max-width: 768px) {
+    .caja1, .caja2{
+        margin:0px;
+        width:96%;
+        margin: 2%;
+
+    }
+
+    .contenedor_form_general{
+    flex-direction: column;
+    }
+}
+  
+
+
+.clickAqui{
+    cursor: pointer;
+}
+
+.formulario{
+    background-color:rgba(255,255,255,0.30);
+    padding: 25px 25px 0px 25px;
+    text-align: justify;
+    border-radius: 30px;
+    backdrop-filter:blur(5px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+
+}
+
+.formulario .parrafo{
+    text-align: center;
+}
+
+.titulo{
+    margin-bottom: 30px;
+}
+
+#cancelarSub{
+    text-align: center;
+}
+.formulario2{
+    background-color:rgba(255,255,255,0.30);
+    padding: 25px 25px 0px 25px;
+    text-align: justify;
+    border-radius: 30px;
+    backdrop-filter:blur(5px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+}
+
+.formulario2{
+   /*
+    color:white;
+    
+    height: 90%;
+    background-color: violet;
+    border-radius: 20px;
+    padding: 3%;
+ 
+    display: flex;
+    flex-direction: column;
+ 
+    position: relative;
+    
+    transform: translateY(0%);
+    */
+    transition:transform 10s;
+ 
+
+    width:100%;
+ }
+
+
+
+
+
+.formulario2 .centro{
+    text-align: center;
+}
+
+
+
+
+.cerrar{
+    text-align: center;
+    cursor:pointer;
+/*
+    background-color: red;
+    border-radius: 20px;
+    top:5px;
+    right:5px;
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    border: 1px solid black;*/
+ }
+ 
+
+
+.opciones{
+    border-radius: 10px;
+    border:none;
+   /* margin-bottom: 25px;*/
+    width: 80%;
+    padding: 10px;
+    margin-right: 10%;
+    margin-left:10%;
+}
+
+
+.enviar{
+    text-align: center;
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    border-radius: 5px;
+    border:0.5px solid;
+    border-color: grey;
+    padding: 5px;
+
+    font-size: 15px;
+
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+  /* Media query para pantallas de celular */
+  @media screen and (max-width: 768px) {
+    .enviar{
+        width: 50%;
+        margin-right: 25%;
+        margin-left: 25%;
+        padding: 8px;
+        border-radius: 10px;
+        
+        margin-top:20px;
+
+
+    }
+}
+  
+
+.enviar:hover{
+    background-color: antiquewhite;
+    border-color: antiquewhite;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.cancelarSub{
+    text-align: center;
+    font-size: 12px;
+    
+}
+.mensajeError{
+    margin-top: 5px;
+    color: red;
+    font-size: 12px;
+    margin-bottom: 20px;
+
+    text-align: left;
+    margin-right: 10%;
+    margin-left:10%;
+    
+    
+}
+
+textarea{
+    background-color: rgb(164, 184, 190);
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+
+
+
+
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+    /*
+    bottom: 0;
+    left: 0;
+    */
+}
+
+
+
+
+
+
+/* Responsive*/
+ @media (max-width: 1000px) {
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+ }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+}
+
+@media(min-width: 1000px) {
+   #presentacion .programas{
+    display: flex;
+    justify-content: center;
+
+   }
+
+   #presentacion p{
+    display: block;
+    margin-bottom: 30px;
+   }
+    
+   #presentacion h3{
+    margin-top: 0;
+   }
+
+   #presentacion .carta{
+    padding: 50px;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgb(50,50,50,0.9);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+   }
+
+   .carta:first-child{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+)
+,url(../Img/people2.png);  
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),w
+    rgba(0,0,0,0.5)
+)
+}
+}
+
+
+
+
+
+

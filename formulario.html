@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./formulario.css">
+</head>
+
+<body>
+
+
+
+<!--HEADER-->
+
+<header>
+  <!-- <h2 class="Logo">OUTATIME </h2> -->
+  <input type="checkbox" id="check">
+  <label for="check" class="mostrar-menu">
+      &#8801
+  </label>
+  <nav class="menu">
+      <a href="/index.html">Inicio</a>
+      <a href="#">Peliculas</a>
+      <a href="#">Curiosidades</a>
+      <a href="#">Eshop</a>
+      <a href="#">Contacto</a>
+      <label for="check" class="esconder-menu">
+          &#215
+      </label>
+  </nav>
+</header>
+
+
+<!--HASTA ACA EL HEADER-->
+  
+
+<div class="contenedor_form_general">
+    <div class="caja1">
+
+      <form action="mailto:anaaylencorimayo@gmail.com" class="formulario" id="form">
+    <h3 class="titulo">Formulario de Suscripción</h3>
+    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio expedita eos quod enim vitae esse blanditiis voluptate ipsum temporibus, iure quas architecto, quidem itaque! Natus nihil laudantium explicabo atque odit.</p><br>
+   
+    <input class="opciones" type="text" placeholder="Nombre" id="nombre" required>
+    <p class="mensajeError" id="nombreError"></p>
+
+    <input class="opciones" type="text" placeholder="Apellido" id="apellido" required>
+    <p class="mensajeError" id="apellidoError"></p>
+    
+    
+    <input class="opciones" type="email" placeholder="E-Mail" id="email" required>
+    <p class="mensajeError" id="emailError"></p>
+
+
+    <input id="numero" class="opciones" type="text" placeholder="Numero de celular" pattern="[0-9]{1,10}" required>
+    <p class="mensajeError" id="numeroError"></p>
+     <!--pattern="[0-9]{1,10}", quiere decir que se aceptan digitos del 0 al 9, y del 1 al 10, que solo se aceptan entre 1 y 10 digitos como maximo-->
+  
+
+    <input id="soloenviar" class="enviar" type="submit" value="Enviar">
+    
+
+    <p id="cancelarSub">¿Desea cancelar su subcripcion? <u class="clickAqui">Haz click Aquí</u></p>
+
+    </form>
+
+  
+  </div>
+
+      <div class="caja2">
+
+
+        <form action="mailto:anaaylencorimayo@gmail.com" class="formulario2" id="form2">
+
+          <!--<form action="mailto:anaaylencorimayo@gmail.com" class="formulario2" id="form">-->
+    
+                <h3 class="titulo">Formulario de Cancelación de suscripción</h3>
+     
+                <input class="opciones" type="text" placeholder="Nombre" id="nombre2" required>
+                <p class="mensajeError" id="nombreError2"></p>
+      
+                <input class="opciones" type="text" placeholder="Apellido" id="apellido2" required>
+                <p class="mensajeError" id="apellidoError2"></p>
+      
+                <input class="opciones" type="email" placeholder="E-Mail" id="email2" required>
+                <p class="mensajeError" id="emailError2"></p>
+
+                <p class="centro">¿Desea der algun motivo para su desubcripcion?</p><br>
+
+                <textarea name="" id="" placeholder="Escriba aqui su mensaje." cols="30" rows="10"></textarea>
+  
+
+                <input id="soloenviar2" class="enviar" type="submit" value="Enviar">
+
+                <p class="centro"><u class="cerrar">Cerrar</u></p>
+
+          </form>
+
+      </div>
+  
+</div>
+  
+<footer>
+  <p>&copy; 2023 Volver al Futuro. Todos los derechos reservados.</p>
+</footer>
+
+
+  <script src="./formulario.js"></script>
+</body>
+</html>
