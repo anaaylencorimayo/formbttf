@@ -9,8 +9,6 @@
 
 <body>
 
-
-
 <!--HEADER-->
 
 <header>
@@ -31,67 +29,71 @@
   </nav>
 </header>
 
-
 <!--HASTA ACA EL HEADER-->
   
-
 <div class="contenedor_form_general">
     <div class="caja1">
 
-      <form action="mailto:anaaylencorimayo@gmail.com" class="formulario" id="form">
+      <form action="https://formsubmit.co/62a0231b717e9e4efad91231bb168f7b" method="POST" class="formulario" id="form">
+
     <h3 class="titulo">Formulario de Suscripción</h3>
-    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio expedita eos quod enim vitae esse blanditiis voluptate ipsum temporibus, iure quas architecto, quidem itaque! Natus nihil laudantium explicabo atque odit.</p><br>
+    <p class="parrafo"> ¡No te pierdas ni un solo detalle! Si te gustaria recibir informacion sobre eventos, noticias y curiosidades de esta franquicia, suscríbete a nuestro portal de noticias y mantente al tanto de todas las novedades de estas icónicas películas.
+    </p><br>
    
-    <input class="opciones" type="text" placeholder="Nombre" id="nombre" required>
+    <input class="opciones" type="text" placeholder="Nombre" id="nombre" name="name" required>
     <p class="mensajeError" id="nombreError"></p>
 
-    <input class="opciones" type="text" placeholder="Apellido" id="apellido" required>
+    <input class="opciones" type="text" placeholder="Apellido" id="apellido" name="apellido" required>
     <p class="mensajeError" id="apellidoError"></p>
     
     
-    <input class="opciones" type="email" placeholder="E-Mail" id="email" required>
+    <input class="opciones" type="email" placeholder="E-Mail" id="email" name="email" required>
     <p class="mensajeError" id="emailError"></p>
 
 
-    <input id="numero" class="opciones" type="text" placeholder="Numero de celular" pattern="[0-9]{1,10}" required>
+    <input id="numero" class="opciones" type="text" placeholder="Numero de celular" pattern="[0-9]{1,10}" name="numero" required>
     <p class="mensajeError" id="numeroError"></p>
-     <!--pattern="[0-9]{1,10}", quiere decir que se aceptan digitos del 0 al 9, y del 1 al 10, que solo se aceptan entre 1 y 10 digitos como maximo-->
+     <!--pattern="[0-9]{1,10}", quiere decir que se aceptan valores del 0 al 9, y q solo se aceptan entre 1 y 10 digitos como maximo-->
   
 
     <input id="soloenviar" class="enviar" type="submit" value="Enviar">
-    
 
+    <input type="hidden" name="_next" value="http://127.0.0.1:5501/formulario.html">
+    <!--Sin esto, cada vez que se envia el formulario nos redirige a una pagina que nos dice que el form se envio con exito. El value es la direccion a la que quiero que vuelva.-->
+    <input type="hidden" name="_captcha" value="false">
+    <!--con esto quita el captcha, porque lo ponemos el false. Si lo queremos, ponemos true.-->
+    
     <p id="cancelarSub">¿Desea cancelar su subcripcion? <u class="clickAqui">Haz click Aquí</u></p>
 
     </form>
-
-  
   </div>
 
       <div class="caja2">
 
-
-        <form action="mailto:anaaylencorimayo@gmail.com" class="formulario2" id="form2">
-
-          <!--<form action="mailto:anaaylencorimayo@gmail.com" class="formulario2" id="form">-->
+        <form action="https://formsubmit.co/62a0231b717e9e4efad91231bb168f7b" method="POST" class="formulario2" id="form2">
     
                 <h3 class="titulo">Formulario de Cancelación de suscripción</h3>
      
-                <input class="opciones" type="text" placeholder="Nombre" id="nombre2" required>
+                <input class="opciones" type="text" placeholder="Nombre" id="nombre2" name="nombre_cancelar" required>
                 <p class="mensajeError" id="nombreError2"></p>
       
-                <input class="opciones" type="text" placeholder="Apellido" id="apellido2" required>
+                <input class="opciones" type="text" placeholder="Apellido" id="apellido2" name="apellido_cancelar" required>
                 <p class="mensajeError" id="apellidoError2"></p>
       
-                <input class="opciones" type="email" placeholder="E-Mail" id="email2" required>
+                <input class="opciones" type="email" placeholder="E-Mail" id="email2" name="email_cancelar" required>
                 <p class="mensajeError" id="emailError2"></p>
 
                 <p class="centro">¿Desea der algun motivo para su desubcripcion?</p><br>
 
-                <textarea name="" id="" placeholder="Escriba aqui su mensaje." cols="30" rows="10"></textarea>
+                <textarea id="" placeholder="Escriba aqui su mensaje." cols="30" rows="10" name="sugerencia_usuario"></textarea>
   
 
                 <input id="soloenviar2" class="enviar" type="submit" value="Enviar">
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5501/formulario.html">
+                <!--Sin esto, cada vez que se envia el formulario nos redirige a una pagina que nos dice que el form se envio con exito. El value es la direccion a la que quiero que vuelva.-->
+                <input type="hidden" name="_captcha" value="false">
+                <!--con esto quita el captcha, porque lo ponemos el false. Si lo queremos, ponemos true.-->
 
                 <p class="centro"><u class="cerrar">Cerrar</u></p>
 
@@ -104,7 +106,6 @@
 <footer>
   <p>&copy; 2023 Volver al Futuro. Todos los derechos reservados.</p>
 </footer>
-
 
   <script src="./formulario.js"></script>
 </body>
